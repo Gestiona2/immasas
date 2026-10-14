@@ -26,6 +26,18 @@ Lo que falta para cerrar el sitio o que requiere confirmación del cliente.
 - [ ] **Habeas data / política de privacidad.** El formulario envía por WhatsApp (no guarda
       datos), pero conviene una política corta enlazada en el pie.
 
+## Para pasar de demo a producción (si el cliente compra)
+
+- [ ] Publicar en la cuenta del cliente y quitar `SITE_URL` / `SITE_BASE` (ver `PUBLICAR.md`).
+- [ ] `sitio.json` → `"indexar": true`.
+- [ ] Remoto de Git sin el alias SSH del proveedor.
+- [ ] Empaquetar la entrega: `AGENTS.md` y `CLAUDE.md` (asistente del cliente),
+      `TUTORIAL.md` con ejemplos de este sitio, y los scripts `instalar.*` y `doctor.*`.
+      Hoy **no existen**: la demo solo lleva la documentación de `conocimiento_generado/`.
+- [ ] Archivar el compilado (`dist/`) con la fecha.
+
 ## Hecho
 
 - Rediseño completo, SEO técnico, sitemap, robots, 404, índice de servicios, métodos END.
+- Documentación `conocimiento_generado/` completa (8 archivos).
+- Contraste del tema oscuro corregido (rojo claro para texto).

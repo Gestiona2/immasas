@@ -1,0 +1,23 @@
+# El compilado se regenera en cada cambio: versionarlo ensucia el historial.
+# Al ENTREGAR se archiva una copia aparte con la fecha (ver PENDIENTES.md).
+dist/
+.astro/
+node_modules/
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Seguridad
+.env
+.env.*
+!.env.example
+
+# Material del cliente: no viaja al repositorio.
+# Los archivos ya clasificados y usados por el sitio viven en src/, public/ y docs/.
+insumos/
+
+*.log

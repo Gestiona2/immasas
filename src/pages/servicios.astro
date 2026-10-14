@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import datos from "../datos/servicios.json";
+import sitio from "../datos/sitio.json";
+const { meta, cabecera, servicios, cta, indice, cta_bloque } = datos;
+const wa = `https://wa.me/${sitio.whatsapp}`;
+---
+
+<Layout titulo={meta.titulo} descripcion={meta.descripcion} activa="servicios">
+  <header class="cabecera-pagina">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span> {cabecera.encabezado}</span>
+      <h1>{cabecera.titulo}</h1>
+      <p class="lead">{cabecera.texto}</p>
+    </div>
+  </header>
+
+  <nav class="indice-servicios" aria-label={indice.titulo}>
+    <div class="container indice-inner">
+      <span>{indice.titulo}</span>
+      {servicios.map((s) => <a href={`#${s.id}`}>{s.corto}</a>)}
+    </div>
+  </nav>
+
+  <section class="pad" style="padding-top:64px">
+    <div class="container lista-servicios-pro">
+      {servicios.map((s, i) => (
+        <article class={`servicio-pro ${i % 2 ? "invertido" : ""}`} id={s.id}>
+          <div class={`servicio-pro-foto ${i % 2 ? "reveal-right" : "reveal-left"}`}>
+            <img src={s.imagen} alt="" width="700" height="438" loading="lazy" decoding="async" />
+            <span class="servicio-num">{String(i + 1).padStart(2, "0")}</span>
+          </div>
+          <div class={i % 2 ? "reveal-left" : "reveal-right"}>
+            <span class="servicio-ico"><i data-lucide={s.icono}></i></span>
+            <h2>{s.titulo}</h2>
+            <p class="lead">{s.texto}</p>
+            <ul class="lista-check">
+              {s.puntos.map((p) => <li>{p}</li>)}
+            </ul>
+            <a class="link-detalle" href={wa} target="_blank" rel="noopener">
+              {cta[0].texto} <i data-lucide="arrow-right"></i>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="pad banda-contacto">
+    <div class="container banda-contacto-inner">
+      <div>
+        <h2 class="section-title reveal">{cta_bloque.titulo}</h2>
+        <p class="lead medida-lectura reveal">{cta_bloque.texto}</p>
+        <div class="cta-block reveal" style="justify-content:flex-start">
+          {cta.map((b) => {
+            const href = b.href === "whatsapp" ? wa : b.href;
+            const externo = href.startsWith("http");
+            return (
+              <a href={href} target={externo ? "_blank" : "_self"} rel={externo ? "noopener" : undefined} class={`btn ${b.estilo}`}>
+                {b.texto}
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

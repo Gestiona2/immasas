@@ -1,0 +1,115 @@
+---
+import Layout from "../layouts/Layout.astro";
+import contacto from "../datos/contacto.json";
+import sitio from "../datos/sitio.json";
+const { meta, cabecera, canal, formulario, opciones } = contacto;
+
+/* Los datos duros salen de sitio.json; aquí solo se referencian. */
+const valor = (campo) => campo === "whatsappTexto" ? sitio.whatsappTexto : sitio[campo] ?? "";
+
+---
+
+<Layout titulo={meta.titulo} descripcion={meta.descripcion} activa="contacto">
+  <header class="cabecera-pagina">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span> {cabecera.encabezado}</span>
+      <h1>{cabecera.titulo}</h1>
+      <p class="lead">{cabecera.texto}</p>
+    </div>
+  </header>
+
+  <section class="pad">
+    <div class="container dos-col" style="margin-top:0">
+      {/* ---------- Canal directo ---------- */}
+      <div class="reveal-left">
+        <span class="eyebrow"><span class="dot"></span> {canal.titulo}</span>
+        <p class="lead medida-lectura">{canal.texto}</p>
+
+        <ul class="info-lista">
+          {opciones.map((o) => (
+            <li>
+              <i data-lucide={o.icono}></i>
+              <span>
+                <strong>{o.titulo}</strong>
+                {valor(o.campo)}
+                {o.campo === "direccion" && (
+                  <a class="link-mapa" href={sitio.mapaUrl} target="_blank" rel="noopener">{sitio.comoLlegar}</a>
+                )}
+              </span>
+            </li>
+          ))}
+        </ul>
+
+        <a
+          class="btn btn-primary"
+          href={`https://wa.me/${sitio.whatsapp}`}
+          target="_blank"
+          rel="noopener"
+        >
+          {canal.boton}
+        </a>
+      </div>
+
+      {/* ---------- Formulario ---------- */}
+      <form
+        class="formulario reveal-right"
+        id="formContacto"
+        action={`https://wa.me/${sitio.whatsapp}`}
+        method="get"
+        target="_blank"
+        rel="noopener"
+      >
+        <h2 style="font-size:1.35rem;margin-bottom:6px">{formulario.titulo}</h2>
+        <p style="color:var(--text-muted);font-size:.9rem;margin-bottom:22px">{formulario.nota}</p>
+
+        <div class="grupo">
+          <label for="f-nombre">{formulario.campos.nombre} *</label>
+          <input id="f-nombre" name="nombre" type="text" required autocomplete="name" placeholder={formulario.placeholders.nombre} />
+        </div>
+
+        <div class="grupo">
+          <label for="f-empresa">{formulario.campos.empresa}</label>
+          <input id="f-empresa" name="empresa" type="text" autocomplete="organization" placeholder={formulario.placeholders.empresa} />
+        </div>
+
+        <div class="grupo">
+          <label for="f-correo">{formulario.campos.correo}</label>
+          <input id="f-correo" name="correo" type="email" autocomplete="email" placeholder={formulario.placeholders.correo} />
+        </div>
+
+        <div class="grupo">
+          <label for="f-servicio">{formulario.campos.servicio}</label>
+          <select id="f-servicio" name="servicio">
+            {formulario.servicios.map((s) => <option value={s}>{s}</option>)}
+          </select>
+        </div>
+
+        <div class="grupo">
+          <label for="f-mensaje">{formulario.campos.mensaje} *</label>
+          <textarea id="f-mensaje" name="mensaje" required placeholder={formulario.placeholders.mensaje}></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+          {formulario.boton}
+        </button>
+      </form>
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  /* Sin backend: el formulario arma el mensaje de WhatsApp.
+     No hay API key que proteger, pero tampoco antispam — ver LIMITES.md. */
+  document.getElementById("formContacto")?.addEventListener("submit", function (e) {
+    const v = (id) => (document.getElementById(id)?.value || "").trim();
+    const partes = [
+      v("f-nombre") && `Nombre: ${v("f-nombre")}`,
+      v("f-empresa") && `Empresa: ${v("f-empresa")}`,
+      v("f-correo") && `Correo: ${v("f-correo")}`,
+      v("f-servicio") && `Servicio: ${v("f-servicio")}`,
+      v("f-mensaje") && `Mensaje: ${v("f-mensaje")}`,
+    ].filter(Boolean);
+    const texto = encodeURIComponent("Hola, escribo desde immasas.com\n\n" + partes.join("\n"));
+    this.action = `${this.action.split("?")[0]}?text=${texto}`;
+  });
+</script>

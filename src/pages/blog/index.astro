@@ -1,0 +1,37 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { leerPosts } from "../../lib/posts";
+import texto from "../../datos/blog.json";
+
+const posts = leerPosts();
+const { meta, cabecera, lista } = texto;
+---
+
+<Layout titulo={meta.titulo} descripcion={meta.descripcion} activa="blog">
+  <header class="cabecera-pagina">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span> {cabecera.encabezado}</span>
+      <h1>{cabecera.titulo}</h1>
+      <p class="lead">{cabecera.texto}</p>
+    </div>
+  </header>
+
+  <section class="pad">
+    <div class="container">
+      {posts.length === 0 ? (
+        <p class="lead">{lista.vacio}</p>
+      ) : (
+        <div class="grid-posts" data-stagger>
+          {posts.map((p) => (
+            <article class="card post-tarjeta reveal-up">
+              <span class="post-fecha">{p.fecha}</span>
+              <h2><a href={`/blog/${p.slug}`}>{p.titulo}</a></h2>
+              <p style="color:var(--text-soft);font-size:.96rem;line-height:1.7">{p.extracto}</p>
+              <a class="post-link" href={`/blog/${p.slug}`}>{lista.leerMas} <i data-lucide="arrow-right"></i></a>
+            </article>
+          ))}
+        </div>
+      )}
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,236 @@
+{
+  "_comentario": "Todo el contenido de la página de inicio. Una entrada por sección, en el orden en que aparecen. Los textos se editan aquí; el diseño no se toca.",
+  "meta": {
+    "titulo": "IMMA S.A.S. BIC · Ingeniería mecánica y metalúrgica aplicada",
+    "descripcion": "Proyectos y mantenimientos industriales, ensayos no destructivos, gestión integral de activos y control de corrosión interior/exterior."
+  },
+  "portada": {
+    "encabezado": "Ingeniería aplicada",
+    "titulo": "PROYECTOS Y MANTENIMIENTOS INDUSTRIALES",
+    "tituloAcento": "",
+    "texto": "Planeación, ingeniería básica y de detalle, desarrollo y ejecución de proyectos metalmecánicos y civiles. Prestación de servicios de inspección no destructiva.",
+    "botones": [
+      {
+        "texto": "Ver servicios",
+        "href": "/servicios",
+        "estilo": "btn-accent"
+      },
+      {
+        "texto": "Escríbenos",
+        "href": "https://wa.me/573177447678",
+        "estilo": "btn-ghost"
+      }
+    ],
+    "imagen": "/img/slider1-background-1.webp",
+    "imagenAlt": "Ambiente industrial IMMA"
+  },
+  "servicios": {
+    "encabezado": "Servicios",
+    "titulo": "Soluciones para el sector industrial",
+    "texto": "Cubriendo proyectos, integridad de activos, control de corrosión y ensayos no destructivos.",
+    "_limite": "4",
+    "items": [
+      {
+        "titulo": "Proyectos y mantenimientos industriales",
+        "texto": "Ingeniería, prefabricación, montaje, precomisionamiento y puesta en marcha.",
+        "icono": "hard-hat",
+        "imagen": "/img/mantenimiento-industrial-700x438-1.webp",
+        "id": "proyectos"
+      },
+      {
+        "titulo": "Gestión integral de activos",
+        "texto": "Inspección basada en riesgo, corrosión, integridad y confiabilidad de plantas.",
+        "icono": "shield-check",
+        "imagen": "/img/gestion1-2-auto-x2.webp",
+        "id": "activos"
+      },
+      {
+        "titulo": "Monitoreo y control de la corrosión",
+        "texto": "Diagnóstico, control y monitoreo de corrosión interior y exterior.",
+        "icono": "activity",
+        "imagen": "/img/monitoreo2-auto-x2.webp",
+        "id": "corrosion"
+      },
+      {
+        "titulo": "Ensayos no destructivos",
+        "texto": "VT, PT, MT, EC, UT, RT, metalografía y dureza.",
+        "icono": "search",
+        "imagen": "/img/ensayos1-auto-x2.webp",
+        "id": "end"
+      }
+    ],
+    "enlaceTexto": "Ver detalle"
+  },
+  "nosotros": {
+    "encabezado": "Nosotros",
+    "titulo": "IMMA S.A.S. BIC",
+    "texto": "Prestación de servicios de ingeniería con enfoque en diseño, planeación y ejecución de proyectos. Más de 15 años de experiencia, con certificación en ASNT, ASME, API, NACE y AWS.",
+    "imagen": "/img/acercade2.webp",
+    "imagenAlt": "Equipo de trabajo",
+    "boton": {
+      "texto": "Conocer IMMA",
+      "href": "/nosotros",
+      "estilo": "btn-ghost"
+    }
+  },
+  "cifras": {
+    "_limite": "Exactamente 4.",
+    "items": [
+      {
+        "numero": 15,
+        "sufijo": "+",
+        "texto": "Años de experiencia del equipo",
+        "icono": "calendar"
+      },
+      {
+        "numero": 4,
+        "sufijo": "",
+        "texto": "Líneas de servicio especializadas",
+        "icono": "layers"
+      },
+      {
+        "numero": 5,
+        "sufijo": "",
+        "texto": "Normativas: ASNT, ASME, API, NACE y AWS",
+        "icono": "award"
+      },
+      {
+        "numero": 2,
+        "sufijo": "",
+        "texto": "Sectores: industrial y energético",
+        "icono": "factory"
+      }
+    ]
+  },
+  "faq": {
+    "encabezado": "Preguntas frecuentes",
+    "titulo": "Preguntas frecuentes",
+    "_limite": "6",
+    "items": [
+      {
+        "pregunta": "¿Qué son los ensayos no destructivos?",
+        "respuesta": "Pruebas que permiten conocer el estado de un componente o pieza sin modificar su estructura ni sus propiedades: evalúan la integridad sin dañar el material."
+      },
+      {
+        "pregunta": "¿Con qué normas trabajan?",
+        "respuesta": "El equipo está capacitado y certificado con entidades reconocidas a nivel nacional e internacional: ASNT, ASME, API, NACE y AWS."
+      },
+      {
+        "pregunta": "¿Qué líneas de servicio ofrecen?",
+        "respuesta": "Proyectos y mantenimientos industriales, gestión e integridad de activos, monitoreo y control de la corrosión, y ensayos no destructivos."
+      },
+      {
+        "pregunta": "¿Qué métodos de ensayo no destructivo aplican?",
+        "respuesta": "Inspección visual, tintas penetrantes, partículas magnéticas, corrientes inducidas, ultrasonido, radiografía digital, monitoreo por condición, metalografía y ensayos de dureza."
+      },
+      {
+        "pregunta": "¿Qué incluye la gestión integral de activos?",
+        "respuesta": "Consultoría en inspección, corrosión, integridad y confiabilidad de plantas, estaciones, equipos, tanques de almacenamiento y líneas de transporte."
+      },
+      {
+        "pregunta": "¿Cuál es su horario de atención?",
+        "respuesta": "Lunes a viernes de 8:00 a.m. a 6:00 p.m. y sábados de 8:00 a.m. a 12:00 m."
+      }
+    ]
+  },
+  "contacto": {
+    "encabezado": "Contacto",
+    "titulo": "¿Necesita un proyecto o una inspección?",
+    "texto": "Escríbanos por WhatsApp y nos pondremos en contacto lo antes posible.",
+    "botones": [
+      {
+        "texto": "Ir a contacto",
+        "href": "/contacto",
+        "estilo": "btn-primary"
+      },
+      {
+        "texto": "WhatsApp directo",
+        "href": "whatsapp",
+        "estilo": "btn-ghost"
+      }
+    ],
+    "telefonoEtiqueta": "O llámenos / escríbanos al",
+    "horarioEtiqueta": "Horario",
+    "direccionEtiqueta": "Dirección"
+  },
+  "confianza": {
+    "_comentario": "Banda inmediata bajo la portada. Textos cortos; máximo 4 para que no se apile en 1440px.",
+    "items": [
+      {
+        "texto": "Más de 15 años de experiencia",
+        "icono": "award"
+      },
+      {
+        "texto": "Certificación ASNT · ASME · API",
+        "icono": "badge-check"
+      },
+      {
+        "texto": "Normas NACE y AWS",
+        "icono": "shield-check"
+      },
+      {
+        "texto": "Sectores industrial y energético",
+        "icono": "factory"
+      }
+    ]
+  },
+  "metodos": {
+    "encabezado": "Ensayos no destructivos",
+    "titulo": "Métodos de inspección que aplicamos",
+    "texto": "Cada método responde a un tipo de defecto y a un tipo de superficie. Estos son los que ofrecemos y para qué se usan.",
+    "grupos": [
+      {
+        "titulo": "Volumétricos",
+        "texto": "Detectan discontinuidades en el interior del material.",
+        "icono": "scan-search",
+        "items": [
+          "Ultrasonido (UT)",
+          "Radiografía digital (RT)"
+        ]
+      },
+      {
+        "titulo": "Superficiales y subsuperficiales",
+        "texto": "Revelan fallas en la superficie o muy cerca de ella.",
+        "icono": "layers",
+        "items": [
+          "Tintas penetrantes (PT)",
+          "Partículas magnéticas (MT)",
+          "Corrientes inducidas (EC)"
+        ]
+      },
+      {
+        "titulo": "Visuales y de condición",
+        "texto": "Evalúan el estado del equipo, incluso donde no hay acceso directo.",
+        "icono": "eye",
+        "items": [
+          "Inspección visual (VT)",
+          "Monitoreo por condición"
+        ]
+      },
+      {
+        "titulo": "Materiales",
+        "texto": "Caracterizan la estructura y las propiedades del metal.",
+        "icono": "microscope",
+        "items": [
+          "Metalografía",
+          "Ensayos de dureza"
+        ]
+      }
+    ],
+    "imagen": "/img/ensayos1.webp",
+    "imagenAlt": "Inspección no destructiva sobre una pieza metálica",
+    "boton": {
+      "texto": "Ver todos los servicios",
+      "href": "/servicios#end",
+      "estilo": "btn-accent"
+    }
+  },
+  "blog": {
+    "encabezado": "Blog",
+    "titulo": "Notas técnicas",
+    "texto": "Artículos sobre inspección, corrosión y mantenimiento industrial.",
+    "leer": "Leer artículo",
+    "todos": "Ver todas las notas",
+    "href": "/blog"
+  }
+}

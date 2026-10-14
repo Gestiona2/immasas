@@ -1,0 +1,79 @@
+{
+  "_comentario": "Contenido de la página Nosotros. Textos tomados del sitio actual de IMMA.",
+  "meta": {
+    "titulo": "Nosotros — IMMA S.A.S. BIC",
+    "descripcion": "Misión, visión, historia y valores de IMMA S.A.S. BIC, ingeniería mecánica y metalúrgica aplicada."
+  },
+  "cabecera": {
+    "encabezado": "Nosotros",
+    "titulo": "Ingeniería con planeación, calidad y seguridad",
+    "texto": "IMMA S.A.S. BIC es una empresa dedicada a la prestación de servicios de ingeniería, con enfoque en diseño, planeación y ejecución de proyectos."
+  },
+  "introduccion": "IMMA SAS BIC brinda soluciones integrales y de consultoría para el manejo de la gestión integral de activos e inspección basada en riesgo de plantas industriales, estructuras y equipos, confiabilidad de plantas, protección catódica, monitoreo de corrosión interior, montajes industriales y mantenimiento, con el objeto de satisfacer integralmente las necesidades del sector industrial.",
+  "mision": "IMMA SAS BIC es una empresa dedicada a la prestación de servicios de ingeniería, ofreciendo soluciones acordes a las necesidades de nuestros clientes, teniendo como pilares planeación estratégica, buen uso de los recursos, calidad, seguridad y conservación del medio ambiente.",
+  "vision": "En el 2026 IMMA SAS BIC será una empresa consolidada y reconocida por la ejecución de sus proyectos, manteniendo e implementando la planeación estratégica, la calidad, seguridad, buen manejo de los recursos y la conservación del medio ambiente. Además, IMMA SAS BIC estará certificada en al menos un sistema de gestión de la calidad.",
+  "historia": "El personal que integra IMMA S.A.S. BIC está conformado por profesionales con más de 15 años de experiencia y especialistas de diferentes disciplinas, apoyados por expertos con una amplia trayectoria y experiencia en los sectores industrial y energético en las líneas de servicio que se ofrecen, con una constante y sistemática capacitación y certificación con entidades reconocidas a nivel nacional e internacional como ASNT, ASME, API, NACE y AWS.",
+  "valores": {
+    "titulo": "Cómo trabajamos",
+    "texto": "Los pilares que orientan cada proyecto, según la misión de la empresa.",
+    "items": [
+      {
+        "titulo": "Planeación estratégica",
+        "texto": "Cada proyecto arranca con planeación: alcance, recursos y tiempos definidos antes de ejecutar.",
+        "icono": "map"
+      },
+      {
+        "titulo": "Calidad",
+        "texto": "Nos enfocamos en la calidad de cada uno de los trabajos realizados.",
+        "icono": "badge-check"
+      },
+      {
+        "titulo": "Seguridad",
+        "texto": "La seguridad es una base de la operación, no un anexo del contrato.",
+        "icono": "hard-hat"
+      },
+      {
+        "titulo": "Medio ambiente",
+        "texto": "La conservación del medio ambiente es uno de los pilares del servicio.",
+        "icono": "leaf"
+      },
+      {
+        "titulo": "Equipo",
+        "texto": "Trabajamos en equipo para brindar un excelente trabajo a cada uno de nuestros clientes.",
+        "icono": "users"
+      },
+      {
+        "titulo": "Cumplimiento",
+        "texto": "El tiempo es un factor determinante a la hora de cumplir con un objetivo.",
+        "icono": "clock"
+      }
+    ],
+    "eyebrow": "Valores"
+  },
+  "normas": {
+    "titulo": "Capacitación y certificación",
+    "texto": "Constante y sistemática capacitación del equipo con entidades reconocidas a nivel nacional e internacional.",
+    "items": [
+      "ASNT",
+      "ASME",
+      "API",
+      "NACE",
+      "AWS"
+    ],
+    "eyebrow": "Certificación"
+  },
+  "foto": {
+    "src": "/img/acercade2.webp",
+    "alt": "Instalaciones y trabajos de ingeniería de IMMA"
+  },
+  "introduccionCta": {
+    "texto": "Ver servicios",
+    "href": "/servicios",
+    "estilo": "btn-ghost"
+  },
+  "titulos": {
+    "mision": "Misión",
+    "vision": "Visión",
+    "historia": "Historia"
+  }
+}

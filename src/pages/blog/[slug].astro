@@ -1,0 +1,59 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { fechaLegible } from "../../lib/fecha";
+import texto from "../../datos/blog.json";
+import fs from "node:fs";
+import path from "node:path";
+
+export async function getStaticPaths() {
+  const dir = path.join(process.cwd(), "src/content/blog");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".md"))
+    .map((f) => ({ params: { slug: f.replace(".md", "") } }));
+}
+
+const { slug } = Astro.params;
+const raw = fs.readFileSync(path.join(process.cwd(), "src/content/blog", `${slug}.md`), "utf8");
+const cabecera = raw.match(/^---([\s\S]*?)---/);
+const front = cabecera ? cabecera[1] : "";
+const titulo = (front.match(/^title:\s*(.+)$/m) || [])[1]?.trim().replace(/^"|"$/g, "") || slug;
+const fecha = (front.match(/^pubDate:\s*(.+)$/m) || [])[1]?.trim() || "";
+
+/* Cuerpo en bloques: párrafos sueltos y listas ("- ítem"). */
+const bloques: { tipo: "p" | "ul"; texto: string; items?: string[] }[] = [];
+for (const trozo of raw.replace(/^---[\s\S]*?---/, "").trim().split(/\n{2,}/).filter(Boolean)) {
+  const lineas = trozo.split("\n").map((l) => l.trim());
+  if (lineas.every((l) => l.startsWith("- ") && l.length > 2)) {
+    bloques.push({ tipo: "ul", texto: "", items: lineas.map((l) => l.slice(2)) });
+  } else {
+    bloques.push({ tipo: "p", texto: lineas.join(" ") });
+  }
+}
+const primerParrafo = bloques.find((b) => b.tipo === "p")?.texto || "";
+const meta = { titulo: `${titulo} — IMMA`, descripcion: primerParrafo.slice(0, 155) || titulo };
+---
+
+<Layout titulo={meta.titulo} descripcion={meta.descripcion} activa="blog">
+  <header class="cabecera-pagina">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span> {texto.cabecera.encabezado}</span>
+      <h1>{titulo}</h1>
+      {fecha && <p class="lead">{fechaLegible(fecha)}</p>}
+    </div>
+  </header>
+
+  <section class="pad">
+    <div class="container medida-lectura">
+      <a class="volver" href="/blog"><i data-lucide="arrow-left"></i> {texto.lista.volver}</a>
+      <article class="bloque-texto prosa reveal" style="margin-top:24px">
+        {bloques.map((b) =>
+          b.tipo === "ul"
+            ? <ul>{b.items?.map((i) => <li>{i}</li>)}</ul>
+            : <p>{b.texto}</p>
+        )}
+      </article>
+    </div>
+  </section>
+</Layout>

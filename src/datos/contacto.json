@@ -1,0 +1,59 @@
+{
+  "_comentario": "Contenido de la página de contacto. Los datos duros (dirección, horario, WhatsApp) viven en sitio.json y aquí solo se describe qué mostrar.",
+  "meta": {
+    "titulo": "Contacto — IMMA S.A.S. BIC",
+    "descripcion": "Escríbanos por WhatsApp o use el formulario de contacto de IMMA S.A.S. BIC."
+  },
+  "cabecera": {
+    "encabezado": "Contacto",
+    "titulo": "Hablemos de su proyecto",
+    "texto": "Cuéntenos qué necesita y le respondemos con una propuesta de alcance y tiempos."
+  },
+  "canal": {
+    "titulo": "Escríbanos por WhatsApp",
+    "texto": "Es la vía más rápida. Al enviar el formulario se abre WhatsApp con su mensaje ya escrito.",
+    "boton": "Abrir WhatsApp"
+  },
+  "formulario": {
+    "titulo": "Déjanos un mensaje",
+    "campos": {
+      "nombre": "Nombre",
+      "empresa": "Empresa",
+      "correo": "Correo electrónico",
+      "servicio": "Servicio de interés",
+      "mensaje": "Mensaje"
+    },
+    "nota": "Los campos con * son obligatorios.",
+    "boton": "Enviar por WhatsApp",
+    "servicios": [
+      "Proyectos y mantenimientos industriales",
+      "Gestión e integridad de activos",
+      "Monitoreo y control de la corrosión",
+      "Ensayos no destructivos",
+      "Otro / no estoy seguro"
+    ],
+    "placeholders": {
+      "nombre": "Su nombre",
+      "empresa": "Empresa o planta",
+      "correo": "nombre@empresa.com",
+      "mensaje": "Describa el equipo o la planta, la ubicación y qué necesita evaluar o construir."
+    }
+  },
+  "opciones": [
+    {
+      "campo": "direccion",
+      "titulo": "Dirección",
+      "icono": "map-pin"
+    },
+    {
+      "campo": "horario",
+      "titulo": "Horario",
+      "icono": "clock"
+    },
+    {
+      "campo": "whatsappTexto",
+      "titulo": "WhatsApp",
+      "icono": "message-circle"
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+{
+  "_comentario": "Contenido de la página de servicios. Un objeto por servicio, en el orden en que se muestran.",
+  "meta": {
+    "titulo": "Servicios — IMMA S.A.S. BIC",
+    "descripcion": "Proyectos y mantenimientos industriales, gestión de activos, control de corrosión y ensayos no destructivos."
+  },
+  "cabecera": {
+    "encabezado": "Servicios",
+    "titulo": "Cuatro líneas de servicio para la industria",
+    "texto": "Ingeniería, inspección y consultoría con un mismo criterio: calidad, seguridad y cumplimiento."
+  },
+  "servicios": [
+    {
+      "id": "proyectos",
+      "titulo": "Proyectos y mantenimientos industriales",
+      "texto": "Planeación, ingeniería básica y de detalle, desarrollo y ejecución de proyectos metalmecánicos y civiles.",
+      "icono": "hard-hat",
+      "puntos": [
+        "Prefabricación y montaje de equipos, líneas de servicio y accesorios en acero al carbón, acero inoxidable, HDPE y aleaciones especiales",
+        "Obras eléctricas e instrumentación",
+        "Precomisionamiento, comisionamiento y puesta en marcha de líneas y equipos de proceso"
+      ],
+      "imagen": "/img/mantenimiento-industrial-700x438-1.webp",
+      "corto": "Proyectos"
+    },
+    {
+      "id": "activos",
+      "titulo": "Gestión e Integridad de Activos",
+      "texto": "Consultoría en inspección, corrosión, integridad y confiabilidad en plantas, estaciones, equipos, tanques de almacenamiento y líneas de transporte del sector industrial.",
+      "icono": "shield-check",
+      "puntos": [
+        "Inspección basada en riesgo de plantas y estructuras",
+        "Confiabilidad de plantas y equipos",
+        "Protección catódica"
+      ],
+      "imagen": "/img/gestion1-2-auto-x2.webp",
+      "corto": "Activos"
+    },
+    {
+      "id": "corrosion",
+      "titulo": "Monitoreo y Control de la Corrosión Interior y Exterior",
+      "texto": "Consultoría en proyectos de diagnóstico, control y monitoreo de la corrosión en equipos, tanques y líneas de transporte.",
+      "icono": "activity",
+      "puntos": [
+        "Diagnóstico de corrosión interior y exterior",
+        "Monitoreo y control en equipos y líneas de transporte"
+      ],
+      "imagen": "/img/monitoreo2-auto-x2.webp",
+      "corto": "Corrosión"
+    },
+    {
+      "id": "end",
+      "titulo": "Ensayos No Destructivos",
+      "texto": "Prestación de servicios de inspección no destructiva para toda la industria, sin modificar la estructura ni las propiedades del componente evaluado.",
+      "icono": "scan-search",
+      "puntos": [
+        "Inspección visual",
+        "Tintas penetrantes",
+        "Partículas magnéticas",
+        "Corrientes inducidas",
+        "Ultrasonido",
+        "Radiografía digital",
+        "Monitoreo por condición",
+        "Metalografía",
+        "Ensayos de dureza"
+      ],
+      "imagen": "/img/ensayos1-auto-x2.webp",
+      "corto": "Ensayos"
+    }
+  ],
+  "cta": [
+    {
+      "texto": "Cotizar un proyecto",
+      "href": "whatsapp",
+      "estilo": "btn-primary"
+    },
+    {
+      "texto": "Formulario de contacto",
+      "href": "/contacto",
+      "estilo": "btn-ghost"
+    }
+  ],
+  "indice": {
+    "titulo": "Ir a"
+  },
+  "cta_bloque": {
+    "titulo": "¿Tiene un equipo, una línea o una planta por evaluar?",
+    "texto": "Cuéntenos el alcance y le respondemos con una propuesta de trabajo."
+  }
+}

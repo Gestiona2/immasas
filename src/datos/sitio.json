@@ -1,0 +1,70 @@
+{
+  "_comentario": "Datos que se repiten en todas las páginas: menú, pie, contacto. El contenido de cada página va en su propio archivo (inicio.json, servicios.json...).",
+  "nombre": "IMMA",
+  "razonSocial": "IMMA S.A.S. BIC",
+  "nit": "",
+  "descripcion": "Ingeniería mecánica y metalúrgica aplicada. Proyectos y mantenimientos industriales, ensayos no destructivos, gestión integral de activos y control de corrosión.",
+  "whatsapp": "573177447678",
+  "correo": "",
+  "correoLegal": "",
+  "direccion": "Calle 41 N° 1C-48 Apto 202A, Tunja, Boyacá",
+  "horario": "Lun a vie: 8am - 6pm · Sábados: 8am a 12pm",
+  "claveTema": "immasas-tema",
+  "menu": [
+    {
+      "id": "inicio",
+      "texto": "Inicio",
+      "href": "/"
+    },
+    {
+      "id": "nosotros",
+      "texto": "Nosotros",
+      "href": "/nosotros"
+    },
+    {
+      "id": "servicios",
+      "texto": "Servicios",
+      "href": "/servicios"
+    },
+    {
+      "id": "blog",
+      "texto": "Blog",
+      "href": "/blog"
+    },
+    {
+      "id": "contacto",
+      "texto": "Contacto",
+      "href": "/contacto"
+    }
+  ],
+  "ctaPrincipal": {
+    "texto": "Escríbenos",
+    "href": "https://wa.me/573177447678"
+  },
+  "redes": [],
+  "legales": [],
+  "whatsappTexto": "317 744 7678",
+  "accesibilidad": {
+    "saltarContenido": "Saltar al contenido",
+    "menuPrincipal": "Principal",
+    "tema": "Cambiar entre tema claro y oscuro",
+    "abrirMenu": "Abrir menú",
+    "cerrarMenu": "Cerrar menú",
+    "whatsapp": "Escribir por WhatsApp",
+    "volverArriba": "Volver arriba"
+  },
+  "url": "https://immasas.com",
+  "pie": {
+    "serviciosTitulo": "Servicios",
+    "paginasTitulo": "Páginas",
+    "contactoTitulo": "Contacto",
+    "cta": "Cotizar por WhatsApp"
+  },
+  "descripcionCorta": "Ingeniería mecánica y metalúrgica aplicada",
+  "direccionCalle": "Calle 41 N° 1C-48 Apto 202A",
+  "ciudad": "Tunja",
+  "departamento": "Boyacá",
+  "mapaUrl": "https://www.google.com/maps/search/?api=1&query=Calle%2041%20%231C-48%2C%20Tunja%2C%20Boyac%C3%A1%2C%20Colombia",
+  "comoLlegar": "Cómo llegar",
+  "indexar": false
+}

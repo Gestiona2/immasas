@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+import sitio from "../datos/sitio.json";
+import datos from "../datos/sitio-404.json";
+---
+
+<Layout titulo={datos.titulo} activa="">
+  <header class="cabecera-pagina">
+    <div class="container">
+      <span class="eyebrow"><span class="dot"></span> {datos.encabezado}</span>
+      <h1>{datos.h1}</h1>
+      <p class="lead">{datos.texto}</p>
+      <div class="portada-botones">
+        <a href="/" class="btn btn-accent">{datos.inicio}</a>
+        <a href={sitio.ctaPrincipal.href} target="_blank" rel="noopener" class="btn btn-ghost">{sitio.ctaPrincipal.texto}</a>
+      </div>
+    </div>
+  </header>
+</Layout>

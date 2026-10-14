@@ -1,0 +1,17 @@
+{
+  "_comentario": "Contenido de las páginas del blog. El texto de cada artículo vive en src/content/blog/*.md, no aquí.",
+  "meta": {
+    "titulo": "Blog — IMMA S.A.S. BIC",
+    "descripcion": "Artículos sobre ensayos no destructivos, corrosión y proyectos industriales."
+  },
+  "cabecera": {
+    "encabezado": "Blog",
+    "titulo": "Notas técnicas",
+    "texto": "Artículos sobre ensayos no destructivos, integridad de activos y mantenimiento industrial."
+  },
+  "lista": {
+    "vacio": "Próximamente publicaremos nuevas notas técnicas.",
+    "leerMas": "Leer más",
+    "volver": "Volver al blog"
+  }
+}
